@@ -10,7 +10,8 @@ It can crunch through the 8 events in the test.csv file in just a few seconds.
 
 ## How It Works
 
-Swimmers are compared based on a metric called RPI (Relative Power Index), this is detemined by this equation: `RPI = Swimmer's Time/Record Time`.
+Swimmers are compared based on a metric called RPI (Relative Power Index), this is detemined by this equation:<br>
+`RPI = Swimmer's Time/Record Time`.
 
 Once RPI is calculated for all swimmers' events, we are looking for the lineup with the lowest total RPI, calculated by just summing all RPI's in the lineup.
 
@@ -21,9 +22,11 @@ To limit the computational power required, this method focuses on the events, ra
 We can cover not all, but most reasonable, possible orders of lineups by assigning the top 3 swimmers to an event, and cycling through all possible permutations of the order of events.
 
 This program uses a recursive algorithm to generate all of the permuations for orders of events.<br>
-`P(1,2,3) = [1 + P(2,3)] + [2 + P(1,3)] + [3 + P(1,2)]`<br>
-`P(1,2)` &nbsp; &nbsp; &nbsp;`= [1 + P(2)] + [2 + P(1)]`<br>
-`P(1)` &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;`= [1]`<br>
+```
+P(1,2,3) = [1 + P(2,3)] + [2 + P(1,3)] + [3 + P(1,2)]
+P(1,2)   = [1 + P(2)] + [2 + P(1)]
+P(1)     = [1]
+```
 
 Finally, just keep track of the lineup with the lowest total RPI while cycling to find the best one. That is then rendered out as a table for the user.
 
