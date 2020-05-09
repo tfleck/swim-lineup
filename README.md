@@ -46,3 +46,5 @@ Change how the program loops to include different 2nd and 3rd place swimmers ins
 Add in support for relay events.
 
 Add support for different sets of rules (e.g. the limit on the number of events a swimmer can be in).
+
+If you implement any of these improvements, please submit a pull request!
