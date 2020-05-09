@@ -6,6 +6,9 @@ I have implemented an algorithm originally developed by Alan Fleck as an Excel m
 
 It can crunch through the 8 events in the test.csv file in just a few seconds.
 
+You can view a live version here:<br>
+<https://tfleck.github.io/swim-lineup/>
+
 ----
 
 ## How It Works
