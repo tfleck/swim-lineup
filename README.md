@@ -21,7 +21,7 @@ To limit the computational power required, this method focuses on the events, ra
 
 We can cover not all, but most reasonable, possible orders of lineups by assigning the top 3 swimmers to an event, and cycling through all possible permutations of the order of events.
 
-This program uses a recursive algorithm to generate all of the permuations for orders of events.<br>
+This program uses a recursive algorithm to generate all of the permuations for orders of events:
 ```
 P(1,2,3) = [1 + P(2,3)] + [2 + P(1,3)] + [3 + P(1,2)]
 P(1,2)   = [1 + P(2)] + [2 + P(1)]
